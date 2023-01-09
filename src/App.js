@@ -21,7 +21,7 @@ function App() {
     try{
       // const proxyUrl = "https://cors-anywhere.herokuapp.com/"
       const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-      const news = await axios.get(`https://${proxyUrl}newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${apikey}&category=${category}&pageSize=${loadMore}`)
+      const news = await axios.get(`${proxyUrl}https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${apikey}&category=${category}&pageSize=${loadMore}`)
      setNewsArray(news.data.articles);
      setNewsResult(news.data.totalResults)
     }catch(error){
